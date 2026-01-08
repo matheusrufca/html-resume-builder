@@ -1,3 +1,4 @@
+import initApp from '@/lib/bootstrap/server';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -21,7 +22,10 @@ type Props = Readonly<{
 	children: React.ReactNode;
 }>;
 
+initApp();
+
 export default function RootLayout({ children, }: Props) {
+
 	return (
 		<html lang="en">
 			<body
